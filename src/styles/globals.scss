@@ -6,8 +6,12 @@
 
 :root {
   --white: #fff;
-  --white-transparent: rgba(255, 255, 255, 0.9);
+
+  --black-transparent: rgba(0, 0, 0, 0.6);
   
+  --gray-100: #e6e8eb;
+  --gray-200: #afb2b1;
+  --gray-500: #808080;
   --gray-800: #494d4b;
 
   --red: #C94A64;
@@ -25,7 +29,8 @@
 
 body {
   font: 500 1rem Inter, sans-serif;
-  background-color: var(--gray-800);
+  background-color: var(--gray-100);
+  color: var(--white);
 }
 
 button, li {
