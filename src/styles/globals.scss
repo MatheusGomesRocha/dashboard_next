@@ -25,6 +25,8 @@
 
   --pink: #C54AC9;
   --pink-hover: #B236B6;
+
+  --orange: #F96332;
 }
 
 body {
@@ -39,7 +41,8 @@ button, li {
 }
  
 li:hover {
-  background: var(--purple);
+  background: var(--white);
+  color: var(--orange);
 }
 
 h1, h2 {
