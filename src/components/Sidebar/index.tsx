@@ -8,7 +8,6 @@ export function Sidebar() {
 
     return(
         <div className={styles.sidebarContainer}>
-            <div className={styles.backgroundTransparent} />
             
             <div className={styles.title}>
                 <h2>Sidebar</h2>
@@ -17,8 +16,7 @@ export function Sidebar() {
             <ul>
                 {array.map((item, k) => (
                     <li style={{
-                        background: sidebarLink === item && '#e6e8eb', 
-                        color: sidebarLink === item && '#121212'
+                        background: sidebarLink === item && '#04d361', 
                     }} onClick={() => setSidebarLink(item)}>{item}</li>
                 ))}
             </ul>

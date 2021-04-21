@@ -10,6 +10,7 @@
   --black-light: #121212;
   --black-transparent: rgba(0, 0, 0, 0.6);
   
+  --gray-50: #f7f8fa;
   --gray-100: #e6e8eb;
   --gray-200: #afb2b1;
   --gray-500: #808080;
@@ -18,11 +19,12 @@
   --red: #C94A64;
   --red-hover: #B63650;
 
-  --green: #4AC9B0;
-  --green-hover: #36B69C;
+  --green-500: #04d361;
 
-  --purple: #6f48c9;
-  --purple-hover: #5D36B6;
+  --purple-300: #9f75ff;
+  --purple-400: #9164fa;
+  --purple-500: #8257e5;
+  --purple-800: #6f48c9;
 
   --pink: #C54AC9;
   --pink-hover: #B236B6;
@@ -42,8 +44,7 @@ button, li {
 }
  
 li:hover {
-  background: var(--gray-100);
-  color: var(--black-light);
+  background: var(--green-500);
 }
 
 h1, h2 {
