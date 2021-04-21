@@ -6,7 +6,17 @@ export default function User() {
 
     return(
         <div className={styles.user}>
-            <h1> olá {router.query.slug} </h1>
+            
+            <div className={styles.divForm}>
+                <div className={styles.negativeTopDiv}>
+                    <h2>Edit Profile</h2>
+                    <span>Complete your profile</span>
+                </div>
+
+                <form>
+                    
+                </form>
+            </div>
         </div>
     )
 }
