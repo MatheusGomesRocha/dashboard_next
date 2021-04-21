@@ -38,11 +38,11 @@ body {
 
 button, li {
   cursor: pointer;
-  transition: 250ms;
+  transition: 100ms;
 }
  
 li:hover {
-  background: var(--white);
+  background: var(--gray-100);
   color: var(--black-light);
 }
 
