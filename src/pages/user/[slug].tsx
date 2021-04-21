@@ -8,7 +8,7 @@ export default function User() {
         <div className={styles.user}>
             
             <div className={styles.divForm}>
-                <div className={styles.negativeTopDiv}>
+                <div className={styles.header}>
                     <h2>Edit Profile</h2>
                     <span>Complete your profile</span>
                 </div>
