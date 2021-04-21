@@ -41,12 +41,12 @@ body {
 button, li {
   cursor: pointer;
   transition: 100ms;
+
+  &:hover {
+    background: var(--green-500);
+  }
 }
  
-li:hover {
-  background: var(--green-500);
-}
-
 h1, h2 {
   font-weight: 600;
   font-family: Lexend, sans-serif;
