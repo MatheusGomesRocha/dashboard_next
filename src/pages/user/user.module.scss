@@ -20,7 +20,7 @@
         top: -1rem;
         padding: 0 1.5rem;
         height: 6rem;
-        margin: 0 2.5% 0 2.5%;
+        margin: 0 2.5%;
         border-radius: 0.5rem;
         width: 95%;
         display: flex;
@@ -30,6 +30,21 @@
         span {
             color: var(--gray-100);
             margin-top: 0.5rem;
+        }
+    }
+    
+    form {
+        position: absolute;
+        top: 7rem;
+        margin: 0 2.5%;
+        width: 95%;
+        display: grid;
+        grid-gap: 4rem;
+
+        div {
+            display: flex;
+            width: 100%;
+            gap: 2rem;
         }
     }
 }
