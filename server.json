@@ -6,42 +6,59 @@
         "salary": "35,457",
         "country": "Brazil",
         "city": "Paramoti",
-        "avatar": "/avatar.jpeg"
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       },
       {
         "id": 2,      
         "name": "Jim Halpert",
         "salary": "17,119",
         "country": "Niger",
-        "city": "Londrina"
+        "city": "Londrina",
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       },
       {
         "id": 3,      
         "name": "Pam Beesly",
         "salary": "29,367",
         "country": "EUA",
-        "city": "Detroit"
+        "city": "Detroit",
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       },
       {
         "id": 4,      
         "name": "Andy Bernard",
         "salary": "91,518",
         "country": "England",
-        "city": "Londres"
+        "city": "Londres",
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       },
       {
         "id": 5,      
         "name": "Dwight Schrute",
         "salary": "59,117",
         "country": "Netherlands",
-        "city": "Weed"
+        "city": "Weed",
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       },
       {
         "id": 6,      
         "name": "Will Smith",
         "salary": "24,874",
         "country": "South Korea",
-        "city": "K-POP"
+        "city": "K-POP",
+        "avatar": "/avatar.jpeg",
+        "about": "Morador de hotéis grátis à 5 anos, fazendo minha vida com isso",
+        "role": "CEO - Founder"
       }
      
     ],
