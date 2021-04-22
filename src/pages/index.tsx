@@ -10,7 +10,7 @@ type User = {
 }
 
 type UserProps = {
-  users: User[]
+  users: User[];
 }
 
 export default function Home({users}: UserProps) {

@@ -29,7 +29,7 @@ export function Sidebar() {
             <ul>
                {array.map(array => {
                     return(
-                    <Link key={array.id} href={array.path}>
+                    <Link key={array.id} href={`/user/Michael-Scott`}>
                         <li style={{ background: sidebarLink === array.link && '#04d361', }} 
                             onClick={() => setSidebarLink(array.link)}>
                             {array.link}
