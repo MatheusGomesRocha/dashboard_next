@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { HeaderContext } from '../../contexts/headerContext';
 import styles from './styles.module.scss';
 
 export function Header() {
+    const { page } = useContext(HeaderContext);
+
     return(
         <div className={styles.headerContainer}>
-            <h1>Dashboard</h1>
+            <h1>{page}</h1>
 
             <div className={styles.iconsContainer}>
                 <div className={styles.icon}>

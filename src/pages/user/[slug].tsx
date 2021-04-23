@@ -24,56 +24,7 @@ export default function User({ user }: UserProps) {
     return(
         <div className={styles.user}>
             
-            <div className={styles.divForm}>
-                <div className={styles.header}>
-                    <h2>Edit Profile</h2>
-                    <span>Complete your profile</span>
-                </div>
-
-                <form>
-                    <div>
-                        <TextField variant="outlined" label="Company (disabled)" disabled />
-                        <TextField variant="outlined" label="Nome de usuário" />
-                        <TextField variant="outlined" label="Email" />
-                    </div>
-
-                    <div>
-                        <TextField variant="outlined" label="Primeiro Nome" />
-                        <TextField variant="outlined" label="Último Nome" />
-                    </div>
-                    <div>
-                        <TextField variant="outlined" label="Cidade" />
-                        <TextField variant="outlined" label="País" />
-                        <TextField variant="outlined" label="CEP" />
-                    </div>
-
-                    <div>
-                        <TextField variant="outlined" label="Sobre mim" />
-                    </div>
-
-                    <div>
-                        <button type="submit">Editar perfil</button>
-                    </div>
-                </form>
-            </div>
-        
-            <div className={styles.profile}>
-                <div>
-                <Image
-                    width={300}
-                    height={300}
-                    src={user.avatar}
-                    objectFit="cover"
-                />
-                </div>
-                
-                <span>{user.role}</span>
-                <h2>{user.name}</h2>
-
-                <p>{user.about}</p>
-
-                <button type="button">Seguir</button>
-            </div>
+            
         </div>
     )
 }
