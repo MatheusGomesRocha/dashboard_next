@@ -13,9 +13,8 @@ export function Sidebar() {
     const array = [
        {id: 1, link: 'Dashboard', path: '/'}, 
        {id: 2, link: 'User Profile', path: `/user/Michael-Scott`}, 
-       {id: 3, link: 'Table List', path: `/user`}, 
-       {id: 4, link: 'Maps', path: `/user`}, 
-       {id: 5, link: 'Notifications', path: `/user`}, 
+       {id: 3, link: 'Maps', path: `/user`}, 
+       {id: 4, link: 'Notifications', path: `/user`}, 
       
     ];
 

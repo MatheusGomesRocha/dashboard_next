@@ -3,8 +3,9 @@ import React from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 import { GetStaticProps } from "next";
-import { AiFillHome } from "react-icons/ai";
 import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
+import { FaUserPlus, FaCog, FaCoins } from 'react-icons/fa';
+import { MdDataUsage } from 'react-icons/md';
 
 import { api } from "../services/api";
 import { Path } from '../components/Path';
@@ -26,10 +27,10 @@ type UserProps = {
 
 export default function Home({users}: UserProps) {
   const array = [
-    {id: 1, title: 'Tráfego Total', amount: '157,872', icon: <AiFillHome size={32} />, moreThanLast: true, diff: '3,48%', lastRequest: 'Since last week'},
-    {id: 2, title: 'Novos Usuários', amount: '3,148', icon: <AiFillHome size={32} />, moreThanLast: false, diff: '1,17%', lastRequest: 'Since yesterday'},
-    {id: 3, title: 'Vendas', amount: '487', icon: <AiFillHome size={32} />, moreThanLast: false, diff: '8,14%', lastRequest: 'Since last friday'},
-    {id: 4, title: 'Perfomace', amount: '71,15%', icon: <AiFillHome size={32} />, moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
+    {id: 1, title: 'Tráfego Total', amount: '157,872', icon: <MdDataUsage size={32} />, color: "#8257e5", moreThanLast: true, diff: '3,48%', lastRequest: 'Since last week'},
+    {id: 2, title: 'Novos Usuários', amount: '3,148', icon: <FaUserPlus size={32} />, color: "#F96332", moreThanLast: false, diff: '1,17%', lastRequest: 'Since yesterday'},
+    {id: 3, title: 'Vendas', amount: '487', icon: <FaCoins size={32} />, color: "#04d361", moreThanLast: false, diff: '8,14%', lastRequest: 'Since last friday'},
+    {id: 4, title: 'Perfomace', amount: '71,15%', icon: <FaCog size={32}/>, color: "#364156", moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
   ];
 
 
@@ -49,7 +50,7 @@ export default function Home({users}: UserProps) {
                   </div>
                   
 
-                  <div className={styles.iconBall}>
+                  <div className={styles.iconBall} style={{background: array.color}}>
                     {array.icon}
                   </div>
                 </div>
