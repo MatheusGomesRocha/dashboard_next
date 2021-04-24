@@ -1,33 +1,27 @@
-.user {
+.user {     // Div Father 
     height: calc(100vh - 6rem);
     overflow-y: scroll;
     background: var(--gray-100);
-    position: relative;
-    
-    h1 {
-        color: black;
-    }    
+    position: relative;   
 
-    form {
+    form {      // Formulário
         background: var(--white);
         width: 95%;
         margin: -7rem 2.5% 2rem 2.5%;
         border-radius: 1rem;
         padding-bottom: 0.5rem; 
 
-        .header {
+        .header {       // Header do Formulário
             padding: 1.5rem 2rem;
             border-bottom: 1px solid var(--gray-100);
 
-            span {
+            span {      // Texto dentro do Header
                 color: var(--gray-800);
                 font: 500 1.5rem Lexend, sans-serif;
             }
         }
 
-      
-
-        .divInput {
+        .divInput {     // Div com os inputs
             display: flex;
             flex-direction: column;
             margin: 0 2rem;
@@ -48,13 +42,13 @@
                 }
             }
 
-            span {
+            span {      // Texto (Título no começo da Div, como -> Informações do Usuário)
                 font: 400 1.4rem Lexend, sans-serif;
                 color: var(--gray-200);
                 margin: 2rem 0;
             }
 
-            .inputs {
+            .inputs {   // Div pai das Divs com label e input
                 border-bottom: 1px solid var(--gray-200);
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
@@ -68,16 +62,16 @@
                     grid-gap: 2rem;
                 }
 
-                div {
+                div {       // Div com label e input
                     display: flex;
                     flex-direction: column;
 
-                    label {
+                    label {     // Label
                         font: 500 1rem Lexend, sans-serif;
                         color: var(--gray-800);
                     }
 
-                    input, textarea {
+                    input, textarea {       // Input e Textarea
                         height: 3rem;
                         width: 100%;
                         border-radius: 0.3rem;
@@ -88,21 +82,21 @@
                         background: none;
                         transition: border 300ms;
 
-                        &:focus {
+                        &:focus {       // Ao focar 
                             border: 1px solid var(--darkblue);
                             outline: 0;
                         }
 
-                        &::placeholder {
+                        &::placeholder {        // Placeholder
                             color: var(--gray-200);
                         }
 
-                        &:focus::placeholder {
+                        &:focus::placeholder {      // Ao focar, o placeholder some
                             color: transparent;
                         }
                     }   // input
 
-                    textarea {
+                    textarea {      // Textarea
                         height: 8rem;
                         padding-top: 0.5rem; 
                         font-size: 1.2rem;
@@ -111,12 +105,12 @@
             }   // .inputs
         }   // .divInput
 
-        .divButton {
+        .divButton {        // Div com Button
             display: flex;
             justify-content: flex-end;
             margin: 2rem;
 
-            button {
+            button {        // Button
                 background: var(--red-500);
                 color: var(--white);
                 border: none;
@@ -127,39 +121,13 @@
                 border-radius: 0.6rem;
                 font-size: 1.1rem;
 
-                &:hover {
+                &:hover {       // Ao passar o mouse em cima-
                     background: var(--red-hover);
                 }
             }
         }
     }   // form
 } // .user
-
-
-.path {
-    display: flex;
-    height: 15rem;
-    padding: 2rem;
-    color: var(--gray-500);
-    background: var(--red-500);
-
-    div {
-        background: var(--white);
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        height: 3rem;
-        padding: 0 1rem;
-        border-radius: 0.5rem;
-    }
-
-    span {
-        font: 500 1.2rem Lexend, sans-serif;
-        color: var(--red-500);
-    }
-}
-
-
 
 
 @media(min-width: 1500px) {

@@ -1,10 +1,10 @@
-import styles from './user.module.scss';
-import { useRouter } from 'next/router';
-import TextField from '@material-ui/core/TextField';
 import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
+
 import { api } from '../../services/api';
-import { AiFillHome } from 'react-icons/ai';
+import { Path } from '../../components/Path';
+
+import styles from './user.module.scss';
 
 type User = {
     id: string;
@@ -24,13 +24,7 @@ type UserProps = {
 export default function User({ user }: UserProps) {
     return(
         <div className={styles.user}>
-            <div className={styles.path}>
-                <div>
-                    <AiFillHome color="#364156" size={25} />
-                    /
-                    <span>User Profile</span>
-                </div>
-            </div>
+            <Path path="User Profile" />
 
             <form>
                 <div className={styles.header}>
