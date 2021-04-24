@@ -16,7 +16,7 @@
   --gray-500: #808080;
   --gray-800: #494d4b;
 
-  --red: #C94A64;
+  --red-500: #C94A64;
   --red-hover: #B63650;
 
   --green-500: #04d361;
@@ -26,10 +26,12 @@
   --purple-500: #8257e5;
   --purple-800: #6f48c9;
 
-  --pink: #C54AC9;
+  --pink-500: #C54AC9;
   --pink-hover: #B236B6;
 
-  --orange: #F96332;
+  --orange-500: #F96332;
+
+  --darkblue: #364156;
 }
 
 body {
@@ -43,7 +45,8 @@ button, li {
   transition: 100ms;
 
   &:hover {
-    background: var(--green-500);
+    background: var(--red-500);
+    color: var(--white);
   }
 }
  

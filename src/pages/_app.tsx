@@ -2,7 +2,7 @@ import { Header }  from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
 import '../styles/globals.scss'
 import styles from '../styles/app.module.scss';
-import { HeaderContextProvider } from '../contexts/headerContext';
+import { HeaderContextProvider } from '../contexts/HeaderContext';
 
 function MyApp({ Component, pageProps }) {
   return (

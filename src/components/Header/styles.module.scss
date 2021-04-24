@@ -1,35 +1,105 @@
 .headerContainer {
     flex: 1;
     height: 6rem;
-    border-bottom: 1px solid var(--gray-200);
     padding: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background: var(--red-500);
+    border-bottom: 1px solid var(--gray-100);
 
     h1 {
-        color: var(--gray-800);
+        color: var(--gray-100);
     }
 }
 
-.iconsContainer {
-    margin-left: auto;
+.divInput {
+    background: var(--gray-100);
+    height: 3rem;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
     display: flex;
+    align-items: center;
+    gap: 1rem;
     
-    .icon {
-        width: 3rem;
-        height: 3rem;
-        margin-left: 1rem;
-        border-radius: 0.4rem;
-        background: var(--gray-100);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: filter 200ms;
+    input {
+        padding-left: 1rem;
+        background: none;
+        outline: 0;
+        border: none;
+        border-left: 1px solid var(--gray-200);
+        font-size: 1rem;
 
-        &:hover {
-            filter: brightness(0.9);
-        }  
+        &::placeholder { 
+            color: var(--gray-200);
+        }
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+
+    div {
+        display: flex;
+        position: relative;
+        align-items: center;    // Só se aplica na div com a imagem e o angle-down do usuário
+        gap: 0.5rem;             // Só se aplica na div com a imagem e o angle-down do usuário
+
+        .icon:hover {
+            color: red;
+        }
+        .badge {
+            background: var(--darkblue);
+            color: var(--white);
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -8px;
+            left: 13px;
+        }
     }
 
+    img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    span {
+        color: var(--gray-100);
+    }
+}
+
+.path {
+    display: flex;
+    height: 15rem;
+    padding: 2rem;
+    color: var(--gray-500);
+    background: var(--red-500);
+
+    div {
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        height: 3rem;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+    }
+
+    span {
+        font: 500 1.2rem Lexend, sans-serif;
+        color: var(--red-500);
+    }
 }
