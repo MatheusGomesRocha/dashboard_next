@@ -1,11 +1,13 @@
-import { GetStaticProps } from "next";
-import { api } from "../services/api";
-import { Path } from '../components/Path';
-import Image from 'next/image';
+import React, { useState } from "react";
 
-import styles from './dashboard.module.scss';
+import { GetStaticProps } from "next";
+import Image from 'next/image';
 import { AiFillHome } from "react-icons/ai";
 import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
+
+import { api } from "../services/api";
+import { Path } from '../components/Path';
+import styles from './dashboard.module.scss';
 
 type User = {
   id: string,
@@ -28,7 +30,7 @@ export default function Home({users}: UserProps) {
     {id: 4, title: 'Perfomace', amount: '71,15%', icon: <AiFillHome size={32} />, moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
   ];
 
-  console.log(users);
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.path}>
@@ -69,13 +71,13 @@ export default function Home({users}: UserProps) {
       </div>
     
       <section className={styles.graphics}>
-        <div className={styles.salesGraphic}>
+          <div className={styles.salesGraphic}>
 
-        </div>
+          </div>
 
-        <div className={styles.ordersGraphic}>
-
-        </div>
+          <div className={styles.ordersGraphic}>
+            
+          </div>
       </section>
 
       <section className={styles.tables}>

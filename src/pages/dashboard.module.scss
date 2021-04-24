@@ -68,6 +68,26 @@
             }
         }
     }
+
+    .graphics {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        grid-gap: 2rem;
+        margin: -8rem 2rem 0 2rem;
+
+        div {
+            border-radius: 0.5rem;
+            height: 30rem;
+        }
+
+        :first-child {
+            background: var(--darkblue);
+        }
+
+        :last-child {
+            background: var(--white);
+        }
+    }
 }
 
 @media(max-width: 1600px) {
@@ -78,6 +98,10 @@
             .infoAmount {
                 grid-template-columns: repeat(2, 1fr);
             }
+        }
+
+        .graphics {
+            grid-template-columns: 1fr;
         }
     }
 }
