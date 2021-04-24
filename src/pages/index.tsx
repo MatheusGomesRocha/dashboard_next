@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import styles from './dashboard.module.scss';
 import { AiFillHome } from "react-icons/ai";
+import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
 
 type User = {
   id: string,
@@ -21,10 +22,10 @@ type UserProps = {
 
 export default function Home({users}: UserProps) {
   const array = [
-    {id: 1, title: 'Tráfego Total', amount: '157,872', icon: <AiFillHome />, moreThanLast: true, diff: '3,48%', lastRequest: 'Since last week'},
-    {id: 2, title: 'Novos Usuários', amount: '3,148', icon: <AiFillHome />, moreThanLast: false, diff: '1,17%', lastRequest: 'Since yesterday'},
-    {id: 3, title: 'Vendas', amount: '487', icon: <AiFillHome />, moreThanLast: false, diff: '8,14%', lastRequest: 'Since last friday'},
-    {id: 4, title: 'Perfomace', amount: '71,15%', icon: <AiFillHome />, moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
+    {id: 1, title: 'Tráfego Total', amount: '157,872', icon: <AiFillHome size={32} />, moreThanLast: true, diff: '3,48%', lastRequest: 'Since last week'},
+    {id: 2, title: 'Novos Usuários', amount: '3,148', icon: <AiFillHome size={32} />, moreThanLast: false, diff: '1,17%', lastRequest: 'Since yesterday'},
+    {id: 3, title: 'Vendas', amount: '487', icon: <AiFillHome size={32} />, moreThanLast: false, diff: '8,14%', lastRequest: 'Since last friday'},
+    {id: 4, title: 'Perfomace', amount: '71,15%', icon: <AiFillHome size={32} />, moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
   ];
 
   console.log(users);
@@ -37,8 +38,11 @@ export default function Home({users}: UserProps) {
           return(
             <div key={array.id}>
               <div className={styles.topRow}>
-                <span>{array.title}</span>
-                <p>{array.amount}</p>
+                <div>
+                  <span>{array.title}</span>
+                  <p>{array.amount}</p>
+                </div>
+                
 
                 <div className={styles.iconBall}>
                   {array.icon}
@@ -47,8 +51,12 @@ export default function Home({users}: UserProps) {
 
               <div className={styles.bottomRow}>
                 <div>
-                  <AiFillHome size={15}/>
-                  <span>{array.diff}</span>
+                  {array.moreThanLast ? 
+                    <BsArrowUp size={25} color="#04d361" />
+                    : 
+                    <BsArrowDown size={25} color="#C94A64" />
+                  }
+                  <span style={{color: array.moreThanLast ? '#04d361' : '#C94A64'}}>{array.diff}</span>
                 </div>
 
                 <span>{array.lastRequest}</span>

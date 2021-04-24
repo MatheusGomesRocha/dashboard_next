@@ -1,0 +1,62 @@
+.dashboard {
+    
+    .infoAmount {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: -22rem 2rem 0 2rem;
+        grid-gap: 2rem;
+        
+        div {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 0.5rem;
+
+            .topRow {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+
+                    span, p {
+                        font: 500 1.2rem Lexend, sans-serif;
+                        color: var(--gray-500);
+                    }
+    
+                    p {
+                        font-size: 1.7rem;
+                        color: var(--gray-800);
+                    }
+                }
+
+                .iconBall {
+                    width: 4rem;
+                    height: 4rem;
+                    background: var(--orange-500);
+                    border-radius: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .bottomRow {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                }
+
+                span {
+                    font: 500 1.2rem Lexend, sans-serif;     
+                    color: var(--gray-800);                
+                }
+            }
+        }
+    }
+}
