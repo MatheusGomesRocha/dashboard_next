@@ -27,7 +27,9 @@ type UserProps = {
 export default function User({ user }: UserProps) {
     return(
         <div className={styles.user}>
-            <Path path="User Profile" />
+            <div className={styles.pathContainer}>
+                <Path path="User Profile" />
+            </div>
 
             <div className={styles.userInfo}>
                 <form>

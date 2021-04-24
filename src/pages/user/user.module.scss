@@ -1,11 +1,16 @@
 .user {     // Div Father 
     height: calc(100vh - 6rem);
-    background: var(--gray-100);
+    
+    .pathContainer {
+        display: flex;
+        height: 17rem;
+        background: var(--red-500);
+    }
 
     form {      // Formulário
         background: var(--white);
         width: 95%;
-        margin: -22rem 2.5% 2rem 2.5%;
+        margin: -8.5rem 2.5% 2rem 2.5%;
         border-radius: 1rem;
         padding-bottom: 0.5rem; 
 
@@ -204,15 +209,15 @@
         .userInfo {     // Div Father do Formulário e .profile
             display: grid;
             grid-template-columns: 60% 40%;
-            margin: 2rem 2rem 5rem 2rem;
+            margin: 0 2rem 5rem 2rem;
 
             form {      // Formulário
-                margin: -22rem 0 2rem 0;
+                margin: -8.5rem 0 2rem 0;
              }
      
              .profile {     // Perfil
                  max-height: 70%;
-                 margin: -22rem 0 0 0;
+                 margin: -8.5rem 0 0 0;
              }
         }     
     }

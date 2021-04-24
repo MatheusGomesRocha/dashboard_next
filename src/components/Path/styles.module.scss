@@ -1,22 +1,21 @@
-.path {     // Div com Path (caminho para a página)
+.pathDiv {       // Div dentro do Path
+    background: var(--white);
+    color: var(--gray-800);
     display: flex;
-    height: 30rem;
-    padding: 2rem;
-    color: var(--gray-500);
-    background: var(--red-500);
-
-    div {       // Div dentro do Path
-        background: var(--white);
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        height: 4rem;
-        padding: 0 1rem;
-        border-radius: 0.5rem;
-    }
-
+    align-items: center;
+    width: auto;
+    gap: 1rem;
+    height: 4rem;
+    width: 15rem;
+    padding: 0 1rem;
+    margin: 2rem 0 0 2rem;
+    border-radius: 0.5rem;
+    
     span {      // Span dentro do Path
         font: 500 1.4rem Lexend, sans-serif;
         color: var(--red-500);
     }
 }
+
+
+

@@ -31,41 +31,42 @@ export default function Home({users}: UserProps) {
   console.log(users);
   return (
     <div className={styles.dashboard}>
-      <Path path="Dashboard" />
+      <div className={styles.path}>
+        <Path path="Dashboard" />
       
-      <section className={styles.infoAmount}>
-        {array.map(array => {
-          return(
-            <div key={array.id}>
-              <div className={styles.topRow}>
-                <div>
-                  <span>{array.title}</span>
-                  <p>{array.amount}</p>
-                </div>
-                
+        <section className={styles.infoAmount}>
+          {array.map(array => {
+            return(
+              <div key={array.id}>
+                <div className={styles.topRow}>
+                  <div>
+                    <span>{array.title}</span>
+                    <p>{array.amount}</p>
+                  </div>
+                  
 
-                <div className={styles.iconBall}>
-                  {array.icon}
+                  <div className={styles.iconBall}>
+                    {array.icon}
+                  </div>
+                </div>
+
+                <div className={styles.bottomRow}>
+                  <div>
+                    {array.moreThanLast ? 
+                      <BsArrowUp size={25} color="#04d361" />
+                      : 
+                      <BsArrowDown size={25} color="#C94A64" />
+                    }
+                    <span style={{color: array.moreThanLast ? '#04d361' : '#C94A64'}}>{array.diff}</span>
+                  </div>
+
+                  <span>{array.lastRequest}</span>
                 </div>
               </div>
-
-              <div className={styles.bottomRow}>
-                <div>
-                  {array.moreThanLast ? 
-                    <BsArrowUp size={25} color="#04d361" />
-                    : 
-                    <BsArrowDown size={25} color="#C94A64" />
-                  }
-                  <span style={{color: array.moreThanLast ? '#04d361' : '#C94A64'}}>{array.diff}</span>
-                </div>
-
-                <span>{array.lastRequest}</span>
-              </div>
-            </div>
-          )
-        })}
-        
-      </section>
+            )
+          })}
+        </section>
+      </div>
     
       <section className={styles.graphics}>
         <div className={styles.salesGraphic}>
