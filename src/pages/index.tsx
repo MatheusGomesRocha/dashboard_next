@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { GetStaticProps } from "next";
 import Image from 'next/image';
+import Link from 'next/link';
+import { GetStaticProps } from "next";
 import { AiFillHome } from "react-icons/ai";
 import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
 
@@ -15,6 +16,7 @@ type User = {
   name: string,
   salary: string,
   city: string,
+  country: string,
   role: string
 }
 
@@ -86,28 +88,32 @@ export default function Home({users}: UserProps) {
            <tr>
               <th></th>
               <th>Usuário</th>
-              <th>Salário</th>
               <th>Cidade</th>
+              <th>País</th>
            </tr>
           </thead>
 
           <tbody>
             {users.map(user => {
               return(
-                <tr key={user.id}>
-                  <td>
-                    <Image
-                      src={user.avatar}
-                      width={100}
-                      height={100}
-                      objectFit="cover"
-                    />
-                  </td>
+                <Link key={user.id} href={`/user/${user.id}`}>
 
-                  <td>{user.name}</td>
-                  <td>{user.salary}</td>
-                  <td>{user.city}</td>
+                <tr>
+                    <td>
+                      <Image
+                        src={user.avatar}
+                        width={100}
+                        height={100}
+                        objectFit="cover"
+                      />
+                    </td>
+
+                    <td>{user.name}</td>
+                    <td>{user.city}</td>
+                    <td>{user.country}</td>
                 </tr>
+                </ Link>
+
               )
             })}
           </tbody>
@@ -162,6 +168,7 @@ export const getStaticProps: GetStaticProps = async () => {
       avatar: user.avatar,
       salary: user.salary,
       city: user.city,
+      country: user.country,
       role: user.role,
     }
   })

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Image from 'next/image';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
@@ -25,6 +27,7 @@ type UserProps = {
 };
 
 export default function User({ user }: UserProps) {
+
     return(
         <div className={styles.user}>
             <div className={styles.pathContainer}>

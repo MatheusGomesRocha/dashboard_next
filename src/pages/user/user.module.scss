@@ -1,205 +1,211 @@
 .user {     // Div Father 
     height: calc(100vh - 6rem);
     
-    .pathContainer {
+    .pathContainer {        // Container com a div que mostra o caminho para á página
         display: flex;
         height: 17rem;
         background: var(--red-500);
     }
 
-    form {      // Formulário
-        background: var(--white);
-        width: 95%;
-        margin: -8.5rem 2.5% 2rem 2.5%;
-        border-radius: 1rem;
-        padding-bottom: 0.5rem; 
+    .userInfo {     // Div Father do Formulário e .profile
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+        
+        form {      // Formulário
+            background: var(--white);
+            width: 95%;
+            margin: -8.5rem 2.5% 2rem 2.5%;
+            border-radius: 1rem;
+            padding-bottom: 0.5rem; 
 
-        .header {       // Header do Formulário
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid var(--gray-100);
+            .header {       // Header do Formulário
+                padding: 1.5rem 2rem;
+                border-bottom: 1px solid var(--gray-100);
 
-            span {      // Texto dentro do Header
-                color: var(--gray-800);
-                font: 500 1.5rem Lexend, sans-serif;
-            }
-        }
-
-        .divInput {     // Div com os inputs
-            display: flex;
-            flex-direction: column;
-            margin: 0 2rem;
-
-            &:nth-child(3) {        // Aplicando somente no item3 (Segunda div do divInput)
-                .inputs {
-                    display: flex;
-                    flex-direction: column;
-                } 
-            }
-           
-            &:last-child {      // Aplicado somente no último divInput (SOBRE MIM)
-                .inputs {
-                    display: flex;
-                    flex-direction: column;
-                    border-bottom: none;
+                span {      // Texto dentro do Header
+                    color: var(--gray-800);
+                    font: 500 1.5rem Lexend, sans-serif;
                 }
             }
 
-            span {      // Texto (Título no começo da Div, como -> Informações do Usuário)
-                font: 400 1.4rem Lexend, sans-serif;
-                color: var(--gray-200);
-                margin: 2rem 0;
-            }
+            .divInput {     // Div com os inputs
+                display: flex;
+                flex-direction: column;
+                margin: 0 2rem;
 
-            .inputs {   // Div pai das Divs com label e input
-                border-bottom: 1px solid var(--gray-200);
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 2rem;
-                padding-bottom: 4rem;
-
-                &:last-child {      // Na ultima div dos Inputs (SOBRE MIM), aplica-se esse CSS
-                    grid-template-columns: 1fr;
+                &:nth-child(3) {        // Aplicando somente no item3 (Segunda div do divInput)
+                    .inputs {
+                        display: flex;
+                        flex-direction: column;
+                    } 
                 }
-                   
-                .secondChild {      // Essa é uma class única para a segunda Div do .inputs
+            
+                &:last-child {      // Aplicado somente no último divInput (SOBRE MIM)
+                    .inputs {
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: none;
+                    }
+                }
+
+                span {      // Texto (Título no começo da Div, como -> Informações do Usuário)
+                    font: 400 1.4rem Lexend, sans-serif;
+                    color: var(--gray-200);
+                    margin: 2rem 0;
+                }
+
+                .inputs {   // Div pai das Divs com label e input
+                    border-bottom: 1px solid var(--gray-200);
                     display: grid;
-                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-columns: repeat(2, 1fr);
                     grid-gap: 2rem;
-                }
+                    padding-bottom: 4rem;
 
-                div {       // Div com label e input
-                    display: flex;
-                    flex-direction: column;
-
-                    label {     // Label
-                        font: 500 1.1rem Lexend, sans-serif;
-                        color: var(--gray-800);
+                    &:last-child {      // Na ultima div dos Inputs (SOBRE MIM), aplica-se esse CSS
+                        grid-template-columns: 1fr;
+                    }
+                    
+                    .secondChild {      // Essa é uma class única para a segunda Div do .inputs
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-gap: 2rem;
                     }
 
-                    input, textarea {       // Input e Textarea
-                        height: 3rem;
-                        width: 100%;
-                        border-radius: 0.3rem;
-                        padding-left: 0.7rem;
-                        margin-top: 0.5rem;
-                        font-size: 1rem;
-                        border: 1px solid var(--gray-100);
-                        background: none;
-                        transition: border 300ms;
+                    div {       // Div com label e input
+                        display: flex;
+                        flex-direction: column;
 
-                        &:focus {       // Ao focar 
-                            border: 1px solid var(--darkblue);
-                            outline: 0;
+                        label {     // Label
+                            font: 500 1.1rem Lexend, sans-serif;
+                            color: var(--gray-800);
                         }
 
-                        &::placeholder {        // Placeholder
+                        input, textarea {       // Input e Textarea
+                            height: 3rem;
+                            width: 100%;
+                            border-radius: 0.3rem;
+                            padding-left: 0.7rem;
+                            margin-top: 0.5rem;
+                            font-size: 1rem;
+                            border: 1px solid var(--gray-100);
+                            background: none;
+                            transition: border 300ms;
+
+                            &:focus {       // Ao focar 
+                                border: 1px solid var(--darkblue);
+                                outline: 0;
+                            }
+
+                            &::placeholder {        // Placeholder
+                                color: var(--gray-200);
+                            }
+
+                            &:focus::placeholder {      // Ao focar, o placeholder some
+                                color: transparent;
+                            }
+                        }   // input
+
+                        textarea {      // Textarea
+                            height: 8rem;
+                            padding-top: 0.5rem; 
+                            font-size: 1.2rem;
+                        }
+                    }   // div
+                }   // .inputs
+            }   // .divInput
+
+            .divButton {        // Div com Button
+                display: flex;
+                justify-content: flex-end;
+                margin: 2rem;
+
+                button {        // Button
+                    background: var(--red-500);
+                    color: var(--white);
+                    border: none;
+                    transform: 200ms;
+                    outline: 0;
+                    height: 3rem;
+                    padding: 0 2rem;
+                    border-radius: 0.6rem;
+                    font-size: 1.1rem;
+
+                    &:hover {       // Ao passar o mouse em cima-
+                        background: var(--red-hover);
+                    }
+                }
+            }
+        }   // form
+
+
+        .profile {      // Div com infos do perfil do usuário
+            background: var(--white);
+            margin: 0 2.5% 2rem 2.5%;
+            padding-bottom: 2rem;
+            border-radius: 1rem;
+        
+            .topBackground {        // Div sem conteúdo que aplica um background com cor diferente 
+                height: 15rem;
+                background: var(--darkblue);
+                border-radius: 1rem 1rem 0 0;
+            }
+        
+            .img {      // Div com Imagem, criada para poder dar um margin-top negativo
+                margin-top: -8rem;
+                display: flex;
+                justify-content: center;
+                
+                img {       // Imagem
+                    width: 15rem;
+                    height: 15rem;
+                    border-radius: 8rem;
+                }
+            }
+        
+            .userHistory {      // Histórico do usuário
+                display: flex;
+                justify-content: center;
+                border-bottom: 1px solid var(--gray-100);
+                padding-bottom: 2rem;
+                gap: 2.5rem;
+                margin-top: 1.5rem;
+        
+                div {   // Div singular dos items 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: var(--gray-800);
+                    font: 500 1.4rem Lexend, sans-serif;
+        
+                    span {      // Textos
+                        &:last-child {      // Primeiro filho desses textos
                             color: var(--gray-200);
                         }
-
-                        &:focus::placeholder {      // Ao focar, o placeholder some
-                            color: transparent;
-                        }
-                    }   // input
-
-                    textarea {      // Textarea
-                        height: 8rem;
-                        padding-top: 0.5rem; 
-                        font-size: 1.2rem;
                     }
-                }   // div
-            }   // .inputs
-        }   // .divInput
-
-        .divButton {        // Div com Button
-            display: flex;
-            justify-content: flex-end;
-            margin: 2rem;
-
-            button {        // Button
-                background: var(--red-500);
-                color: var(--white);
-                border: none;
-                transform: 200ms;
-                outline: 0;
-                height: 3rem;
-                padding: 0 2rem;
-                border-radius: 0.6rem;
-                font-size: 1.1rem;
-
-                &:hover {       // Ao passar o mouse em cima-
-                    background: var(--red-hover);
                 }
-            }
-        }
-    }   // form
-
-
-    .profile {      // Div com infos do perfil do usuário
-        background: var(--white);
-        margin: 0 2.5% 2rem 2.5%;
-        padding-bottom: 2rem;
-        border-radius: 1rem;
-    
-        .topBackground {        // Div sem conteúdo que aplica um background com cor diferente 
-            height: 15rem;
-            background: var(--darkblue);
-            border-radius: 1rem 1rem 0 0;
-        }
-    
-        .img {      // Div com Imagem, criada para poder dar um margin-top negativo
-            margin-top: -8rem;
-            display: flex;
-            justify-content: center;
-            
-            img {       // Imagem
-                width: 15rem;
-                height: 15rem;
-                border-radius: 8rem;
-            }
-        }
-    
-        .userHistory {      // Histórico do usuário
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid var(--gray-100);
-            padding-bottom: 2rem;
-            gap: 2.5rem;
-            margin-top: 1.5rem;
-    
-            div {   // Div singular dos items 
+            }   // .userHistory
+        
+            .userPersonal {     // Informações Pessoais do usuário
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                color: var(--gray-800);
-                font: 500 1.4rem Lexend, sans-serif;
-    
-                span {      // Textos
-                    &:last-child {      // Primeiro filho desses textos
-                        color: var(--gray-200);
-                    }
+                gap: 0.7rem;
+                margin-top: 2rem;
+                
+                span, p {       // Texto e parágrafo
+                    font: 1.2rem Lexend, sans-serif;
+                    color: var(--gray-800);
                 }
-            }
-        }   // .userHistory
-    
-        .userPersonal {     // Informações Pessoais do usuário
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.7rem;
-            margin-top: 2rem;
-            
-            span, p {       // Texto e parágrafo
-                font: 1.2rem Lexend, sans-serif;
-                color: var(--gray-800);
-            }
-    
-            p {     // Parágrafo
-                text-align: center;
-                padding: 0 2rem;
-                color: var(--gray-500)
-            }   
-        }   // .userPersonal
-    }   // .profile
+        
+                p {     // Parágrafo
+                    text-align: center;
+                    padding: 0 2rem;
+                    color: var(--gray-500)
+                }   
+            }   // .userPersonal
+        }   // .profile
+    } // .userInfo
 } // .user
 
 
@@ -209,7 +215,7 @@
         .userInfo {     // Div Father do Formulário e .profile
             display: grid;
             grid-template-columns: 60% 40%;
-            margin: 0 2rem 5rem 2rem;
+            margin: 0 2rem;
 
             form {      // Formulário
                 margin: -8.5rem 0 2rem 0;
