@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
@@ -40,13 +40,6 @@ export function Header() {
                     </div>
             </div>
 
-            {/* <div className={styles.path}>
-                <div>
-                    <AiFillHome onClick={() => togglePage('Dashboard')} size={25} color="#C94A64" />
-                    /
-                    <span>{page}</span>
-                </div>
-            </div> */}
 
         </>
     );
