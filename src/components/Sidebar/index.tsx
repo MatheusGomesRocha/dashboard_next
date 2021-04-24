@@ -2,25 +2,20 @@ import { useContext, useState } from 'react';
 import styles from './styles.module.scss';
 
 import Link from 'next/link';
-import { HeaderContext } from '../../contexts/HeaderContext';
 
 export function Sidebar() {
-    const { togglePage } = useContext(HeaderContext);
     const [sidebarLink, setSidebarLink] = useState('Dashboard');
 
     function setLinkAndPage(value) {
         setSidebarLink(value);
-        togglePage(value);
     }
 
     const array = [
        {id: 1, link: 'Dashboard', path: '/'}, 
        {id: 2, link: 'User Profile', path: `/user/Michael-Scott`}, 
        {id: 3, link: 'Table List', path: `/user`}, 
-       {id: 4, link: 'Typography', path: `/user`}, 
-       {id: 5, link: 'Icons', path: `/user`}, 
-       {id: 6, link: 'Maps', path: `/user`}, 
-       {id: 7, link: 'Notifications', path: `/user`}, 
+       {id: 4, link: 'Maps', path: `/user`}, 
+       {id: 5, link: 'Notifications', path: `/user`}, 
       
     ];
 

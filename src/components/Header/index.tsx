@@ -1,5 +1,4 @@
 import { useContext, useState } from 'react';
-import { HeaderContext } from '../../contexts/HeaderContext';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
@@ -7,9 +6,7 @@ import Image from 'next/image';
 import { AiFillHome, AiOutlineSearch, AiFillBell } from 'react-icons/ai';
 import { GoTriangleDown } from 'react-icons/go';
 
-export function Header() {
-    const { page, togglePage } = useContext(HeaderContext);
-    
+export function Header() {    
     const [hoverBell, setHoverBell] = useState(false);
 
     return(
@@ -43,13 +40,13 @@ export function Header() {
                     </div>
             </div>
 
-            <div className={styles.path}>
+            {/* <div className={styles.path}>
                 <div>
                     <AiFillHome onClick={() => togglePage('Dashboard')} size={25} color="#C94A64" />
                     /
                     <span>{page}</span>
                 </div>
-            </div>
+            </div> */}
 
         </>
     );

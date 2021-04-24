@@ -1,11 +1,23 @@
 .user {
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 16rem);
+    padding: 0 2rem;
     overflow-y: scroll;
+    background: var(--gray-100);
+    position: relative;
     
     h1 {
         color: black;
     }    
+
+    form {
+        background: var(--white);
+        height: 50rem;
+        z-index: 999;
+        position: absolute;
+        top: -25rem;
+    }
 }
+
 
 
 

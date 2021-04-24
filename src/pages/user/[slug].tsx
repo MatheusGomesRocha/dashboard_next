@@ -23,8 +23,14 @@ type UserProps = {
 export default function User({ user }: UserProps) {
     return(
         <div className={styles.user}>
-            
-            
+            <div className={styles.path}>
+                
+            </div>
+            <form>
+                <div className={styles.header}>
+                    <span>Editar Perfil</span>
+                </div>
+            </form>
         </div>
     )
 }
