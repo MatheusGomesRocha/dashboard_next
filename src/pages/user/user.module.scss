@@ -1,8 +1,6 @@
 .user {     // Div Father 
     height: calc(100vh - 6rem);
-    overflow-y: scroll;
     background: var(--gray-100);
-    position: relative;   
 
     form {      // Formulário
         background: var(--white);
@@ -30,7 +28,6 @@
                 .inputs {
                     display: flex;
                     flex-direction: column;
-
                 } 
             }
            
@@ -54,8 +51,11 @@
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 2rem;
                 padding-bottom: 4rem;
-     
-                
+
+                &:last-child {      // Na ultima div dos Inputs (SOBRE MIM), aplica-se esse CSS
+                    grid-template-columns: 1fr;
+                }
+                   
                 .secondChild {      // Essa é uma class única para a segunda Div do .inputs
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -67,7 +67,7 @@
                     flex-direction: column;
 
                     label {     // Label
-                        font: 500 1rem Lexend, sans-serif;
+                        font: 500 1.1rem Lexend, sans-serif;
                         color: var(--gray-800);
                     }
 
@@ -127,21 +127,93 @@
             }
         }
     }   // form
+
+
+    .profile {      // Div com infos do perfil do usuário
+        background: var(--white);
+        margin: 0 2.5% 2rem 2.5%;
+        padding-bottom: 2rem;
+        border-radius: 1rem;
+    
+        .topBackground {        // Div sem conteúdo que aplica um background com cor diferente 
+            height: 15rem;
+            background: var(--darkblue);
+            border-radius: 1rem 1rem 0 0;
+        }
+    
+        .img {      // Div com Imagem, criada para poder dar um margin-top negativo
+            margin-top: -8rem;
+            display: flex;
+            justify-content: center;
+            
+            img {       // Imagem
+                width: 15rem;
+                height: 15rem;
+                border-radius: 8rem;
+            }
+        }
+    
+        .userHistory {      // Histórico do usuário
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid var(--gray-100);
+            padding-bottom: 2rem;
+            gap: 2.5rem;
+            margin-top: 1.5rem;
+    
+            div {   // Div singular dos items 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: var(--gray-800);
+                font: 500 1.4rem Lexend, sans-serif;
+    
+                span {      // Textos
+                    &:last-child {      // Primeiro filho desses textos
+                        color: var(--gray-200);
+                    }
+                }
+            }
+        }   // .userHistory
+    
+        .userPersonal {     // Informações Pessoais do usuário
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.7rem;
+            margin-top: 2rem;
+            
+            span, p {       // Texto e parágrafo
+                font: 1.2rem Lexend, sans-serif;
+                color: var(--gray-800);
+            }
+    
+            p {     // Parágrafo
+                text-align: center;
+                padding: 0 2rem;
+                color: var(--gray-500)
+            }   
+        }   // .userPersonal
+    }   // .profile
 } // .user
 
 
-@media(min-width: 1500px) {
+
+@media(min-width: 1500px) {     // Em telas com largura menor que 1500px
     .user {
-        display: grid;
-        grid-template-columns: 65% 35%;
-    }
+        .userInfo {     // Div Father do Formulário e .profile
+            display: grid;
+            grid-template-columns: 60% 40%;
+            margin: 2rem 2rem 5rem 2rem;
 
-    .profile {
-        min-height: 40%;
-        margin: 3rem 1rem 3rem 0;
-
-        div {
-            margin-top: -1rem;
-        }
+            form {      // Formulário
+                margin: -7rem 0 2rem 0;
+             }
+     
+             .profile {     // Perfil
+                 max-height: 70%;
+                 margin: -7rem 0 0 0;
+             }
+        }     
     }
 }
