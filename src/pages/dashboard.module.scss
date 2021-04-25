@@ -99,7 +99,10 @@
             background: var(--white);
             border-radius: 1rem;
             width: 100%;
-            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 2rem;
+            }
 
             tbody {
                 tr {
