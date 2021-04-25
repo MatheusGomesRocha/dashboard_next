@@ -100,6 +100,17 @@
             border-radius: 1rem;
             width: 100%;
             margin-bottom: 2rem;
+
+            tbody {
+                tr {
+                    cursor: pointer;
+                    transition: 200ms;
+
+                    &:hover {
+                        background: var(--gray-50);
+                    }
+                }
+            }
           
             tr {
                 th, td {
