@@ -102,7 +102,7 @@
                 }
                 
                 &:hover {
-                    background: var(--gray-100);
+                    background: var(--gray-50);
                 }
                 
                 & + div {
@@ -144,6 +144,24 @@
                 span {
                     color: var(--gray-200);
                     margin-top: -3rem;
+                }
+            }
+
+            .viewAll {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                padding: 1rem 0;
+                transition: 200ms;
+
+                &:hover {
+                    background: var(--gray-50);
+                }
+
+                span {
+                    font: 500 1.5rem Lexend, sans-serif;
+                    color: var(--red-500);
                 }
             }
         }

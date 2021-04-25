@@ -96,6 +96,10 @@ export function Header() {
 
                                     <span>11:45</span>
                                 </div>
+                                
+                                <div className={styles.viewAll}>
+                                    <span>Ver todas</span>
+                                </div>
                             </div>
                         </div>
 
