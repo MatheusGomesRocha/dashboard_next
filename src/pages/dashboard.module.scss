@@ -1,6 +1,6 @@
 .dashboard {
     height: calc(100vh - 6rem);
-
+    
     .path {
         display: flex;
         flex-direction: column;
@@ -13,7 +13,8 @@
             margin: 2rem 2rem 0 2rem;
             grid-gap: 2rem;
             z-index: 999;
-            
+            z-index: 1;
+
             div {
                 background: var(--white);
                 border-radius: 1rem;

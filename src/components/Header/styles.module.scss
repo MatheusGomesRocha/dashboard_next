@@ -46,11 +46,9 @@
     gap: 2rem;
     cursor: pointer;
 
-    div {
+    .userNotification {
         display: flex;
         position: relative;
-        align-items: center;    // Só se aplica na div com a imagem e o angle-down do usuário
-        gap: 0.5rem;             // Só se aplica na div com a imagem e o angle-down do usuário
 
         .icon:hover {
             color: red;
@@ -68,15 +66,104 @@
             top: -8px;
             left: 13px;
         }
+       
+        .dropdownMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            background-color: var(--white);
+            z-index: 999;
+            top: 3.7rem;
+            right: 0;
+            width: 35rem;
+            border-radius: 1rem;
+            box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.51);
+            
+            .dropdownMenuItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                background: var(--white);
+                transition: 200ms;
+                width: 100%;
+                gap: 1rem;
+                padding: 0.5rem 0 1rem 0;
+                
+                &:first-child {
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 1rem;
+                    border-bottom-right-radius: 1rem;
+                }
+                
+                &:hover {
+                    background: var(--gray-100);
+                }
+                
+                & + div {
+                    border-top: 1px solid var(--gray-200);
+                }
+
+                .sendedNotificationImg {
+                    width: 5rem;
+                    height: 5rem;
+
+                    img {
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 2.5rem;    
+                    }
+                }
+
+                .sendedNotificationInfo {
+                    display: flex;
+                    flex-direction: column;
+                    color: var(--gray-800);
+                    padding: 0 0.5rem;
+
+                    strong {
+                        font-size: 1.4rem;
+                    }
+
+                    p {
+                        color: var(--gray-800);
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 23rem;
+                        font-size: 1.1rem;
+                        margin-top: 0.5rem;
+                    }
+                }
+
+                span {
+                    color: var(--gray-200);
+                    margin-top: -3rem;
+                }
+            }
+        }
     }
 
-    img {
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-    }
+    
+    .userProfile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
 
-    span {
-        color: var(--gray-100);
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+    
+        span {
+            color: var(--gray-200);
+        }
     }
 }

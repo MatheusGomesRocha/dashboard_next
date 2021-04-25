@@ -157,10 +157,7 @@ export default function Home({users}: UserProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const response = await api.get('users');
-  const data = response.data;
-
-  console.log(data);
+  const { data } = await api.get('users');
 
   const users = data.map(user => {
     return{
