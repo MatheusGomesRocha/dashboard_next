@@ -153,19 +153,27 @@
     "notifications": [
         {
             "id": 1,
-            "content": "João respondeu ao seu Email"
+            "by": "Michael Scott",
+            "content": "Cara, precisamos conversar sobre o Jim.",
+            "time": "11:36"
         },
         {
             "id": 2,
-            "content": "Você tem 5 novos pedidos de amizade"
+            "by": "Rony Weasley",
+            "content": "Mano, o Perebas tá meio estranho.",
+            "time": "18:20"
         },
         {
             "id": 3,
-            "content": "Seu amigo Jhon, roubou $5,00 de você"
+            "by": "Harry Potter",
+            "content": "Eu vou matar aquele Voldmort, fica ligado.",
+            "time": "19:18"
         },
         {
             "id": 4,
-            "content": "Você tem 8 novas tarefas"
+            "by": "Hermione Granger",
+            "content": "Tava estudando porções, chama o Harry pra mim.",
+            "time": "08:10"
         }
     ]
   }

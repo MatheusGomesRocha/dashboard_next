@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,6 +10,7 @@ import { MdDataUsage } from 'react-icons/md';
 import { api } from "../services/api";
 import { Path } from '../components/Path';
 import styles from './dashboard.module.scss';
+import { NotificationContext } from "../contexts/NotificationContext";
 
 type User = {
   id: string,
@@ -21,11 +22,19 @@ type User = {
   role: string
 }
 
-type UserProps = {
-  users: User[];
+type Notification = {
+  id: number;
+  content: string;
+  by: string;
+  time: string;
 }
 
-export default function Home({users}: UserProps) {
+type ComponentProps = {
+  users: User[];
+  notifications: Notification[];
+}
+
+export default function Home({users, notifications}: ComponentProps) {
   const array = [
     {id: 1, title: 'Tráfego Total', amount: '157,872', icon: <MdDataUsage size={32} />, color: "#8257e5", moreThanLast: true, diff: '3,48%', lastRequest: 'Since last week'},
     {id: 2, title: 'Novos Usuários', amount: '3,148', icon: <FaUserPlus size={32} />, color: "#F96332", moreThanLast: false, diff: '1,17%', lastRequest: 'Since yesterday'},
@@ -33,7 +42,13 @@ export default function Home({users}: UserProps) {
     {id: 4, title: 'Perfomace', amount: '71,15%', icon: <FaCog size={32}/>, color: "#364156", moreThanLast: true, diff: '7,98%', lastRequest: 'Since last month'},
   ];
 
+  const { setNotificationEffect } = useContext(NotificationContext);
+  
+  useEffect(() => {
+      setNotificationEffect(notifications);
+  }, [])
 
+  
   return (
     <div className={styles.dashboard}>
       <div className={styles.path}>
@@ -158,6 +173,9 @@ export default function Home({users}: UserProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get('users');
+  const response = await api.get('notifications');
+
+  const dataNotification = response.data;
 
   const users = data.map(user => {
     return{
@@ -171,10 +189,20 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   })
 
+  const notifications = dataNotification.map(notification => {
+    return{
+      id: notification.id,
+      content: notification.content,
+      by: notification.by,
+      time: notification.time,
+    }
+  })
+
 
   return {
     props: {
-      users
+      users,
+      notifications
     },
 
     revalidate: 60 * 60 * 8 // 8 HOURS

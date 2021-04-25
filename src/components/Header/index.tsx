@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 import styles from './styles.module.scss';
 import Image from 'next/image';
 
 import { AiOutlineSearch, AiFillBell } from 'react-icons/ai';
 import { GoTriangleDown } from 'react-icons/go';
+import { NotificationContext } from '../../contexts/NotificationContext';
 
 export function Header() {      
     const [hoverBell, setHoverBell] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
 
+    const { notificationList } = useContext(NotificationContext);
     return(
         <>
             <div className={styles.headerContainer}>
@@ -28,74 +30,27 @@ export function Header() {
                             <div className={styles.badge}>5</div>
 
                             <div style={{display: showDropdown ? 'flex' : 'none'}} className={styles.dropdownMenu}>
-                                <div className={styles.dropdownMenuItem}>
-                                    <div className={styles.sendedNotificationImg}>
-                                        <Image
-                                            src="/avatar.jpeg"
-                                            width={200}
-                                            height={200}
-                                            objectFit="cover"
-                                        />
-                                    </div>
+                                {notificationList.map(notification => {
+                                    return(
+                                        <div key={notification.id} className={styles.dropdownMenuItem}>
+                                            <div className={styles.sendedNotificationImg}>
+                                                <Image
+                                                    src="/avatar.jpeg"
+                                                    width={200}
+                                                    height={200}
+                                                    objectFit="cover"
+                                                />
+                                            </div>
 
-                                    <div className={styles.sendedNotificationInfo}>
-                                        <strong>Michael Scott</strong>
-                                        <p>Mano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumilde</p>
-                                    </div>
+                                            <div className={styles.sendedNotificationInfo}>
+                                                <strong>{notification.by}</strong>
+                                                <p>{notification.content}</p>
+                                            </div>
 
-                                    <span>11:45</span>
-                                </div>
-                                <div className={styles.dropdownMenuItem}>
-                                    <div className={styles.sendedNotificationImg}>
-                                        <Image
-                                            src="/avatar.jpeg"
-                                            width={200}
-                                            height={200}
-                                            objectFit="cover"
-                                        />
-                                    </div>
-
-                                    <div className={styles.sendedNotificationInfo}>
-                                        <strong>Michael Scott</strong>
-                                        <p>Mano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumilde</p>
-                                    </div>
-
-                                    <span>11:45</span>
-                                </div>
-                                <div className={styles.dropdownMenuItem}>
-                                    <div className={styles.sendedNotificationImg}>
-                                        <Image
-                                            src="/avatar.jpeg"
-                                            width={200}
-                                            height={200}
-                                            objectFit="cover"
-                                        />
-                                    </div>
-
-                                    <div className={styles.sendedNotificationInfo}>
-                                        <strong>Michael Scott</strong>
-                                        <p>Mano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumilde</p>
-                                    </div>
-
-                                    <span>11:45</span>
-                                </div>
-                                <div className={styles.dropdownMenuItem}>
-                                    <div className={styles.sendedNotificationImg}>
-                                        <Image
-                                            src="/avatar.jpeg"
-                                            width={200}
-                                            height={200}
-                                            objectFit="cover"
-                                        />
-                                    </div>
-
-                                    <div className={styles.sendedNotificationInfo}>
-                                        <strong>Michael Scott</strong>
-                                        <p>Mano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumildeMano, cadê tu velho? namoral, muito desumilde</p>
-                                    </div>
-
-                                    <span>11:45</span>
-                                </div>
+                                            <span>{notification.time}</span>
+                                         </div>
+                                    )
+                                })}
                                 
                                 <div className={styles.viewAll}>
                                     <span>Ver todas</span>
