@@ -1,0 +1,36 @@
+{
+    "users": [
+      {
+        "id": "number",      
+        "name": "string",
+        "age": "number",
+        "salary": "number",
+        "country": "string",
+        "city": "string",
+        "about": "string",
+        "role": "CEO - Founder",
+        "friends": "number",
+        "photos": "number",
+        "comments": "number"
+      }
+    ],
+
+    "subspcriptions": [
+        {
+            "id": "number",
+            "month": "string",
+            "value": "number"
+        }
+       
+    ],
+
+    "notifications": [
+        {
+            "id": "number",
+            "by": "string",
+            "content": "string",
+            "time": "string"
+        }
+       
+    ]
+  }
