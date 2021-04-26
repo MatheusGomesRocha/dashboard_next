@@ -28,15 +28,15 @@ export default function login() {
                 </div>
 
                 <div className={styles.divInput}>
-                    Ou faça login com as credenciais
+                    <span>Ou faça login com as credenciais</span>
 
                     <div>
-                        <MdEmail size={25} color="#f7f8fa" />
+                        <MdEmail size={25} color="#afb2b1" />
                         <input placeholder="Email" />
                     </div>
                     
                     <div>
-                        <AiFillLock size={25} color="#f7f8fa" />
+                        <AiFillLock size={25} color="#afb2b1" />
                         <input placeholder="Senha" />
                     </div>
                 </div>
@@ -51,8 +51,9 @@ export default function login() {
                 </div>
             </form>
 
-            <div>
+            <div className={styles.links}>
                 <a href="">Esqueceu a senha?</a>
+                
                 <a href="">Criar uma conta</a>
             </div>
         </div>

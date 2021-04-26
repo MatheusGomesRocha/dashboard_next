@@ -6,7 +6,6 @@
     align-items: center;
     justify-content: space-between;
     background: var(--red-500);
-    border-bottom: 1px solid var(--gray-100);
 
     h1 {
         color: var(--gray-100);
@@ -50,9 +49,6 @@
         display: flex;
         position: relative;
 
-        .icon:hover {
-            color: red;
-        }
         .badge {
             background: var(--darkblue);
             color: var(--white);
