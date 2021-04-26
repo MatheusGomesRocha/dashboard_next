@@ -15,7 +15,7 @@ export function Sidebar() {
        {id: 2, link: 'User Profile', path: `/user/Michael-Scott`}, 
        {id: 3, link: 'Maps', path: `/user`}, 
        {id: 4, link: 'Notifications', path: `/user`}, 
-       {id: 5, link: 'Login', path: `/user`}, 
+       {id: 5, link: 'Login', path: `/login`}, 
        {id: 6, link: 'Register', path: `/user`},     
     ];
 
